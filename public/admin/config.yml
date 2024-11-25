@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo: invmv/astro-theme-typography
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://invmy.us.kg
+  auth_endpoint: /api/auth
+media_folder: static/img
+public_folder: /img
+collections:
+  # 页面集合
+  - name: "pages"
+    folder: "src/pages"
+    create: true
+    filter:
+      - field: "type"
+        value: "page"
+    fields:
+      - name: "title"
+        label: "标题"
+        widget: "string"
+      - name: "description"
+        label: "描述"
+        widget: "text"
+        required: false
+      - name: "body"
+        label: "正文"
+        widget: "markdown"
+        editor_components: [] # 禁用内置组件
+        modes: ["raw"] # 支持 Markdown 视图与原始视图切换
+
+  # 博客集合
+  - name: "blog"
+    folder: "src/content/posts/"
+    create: true
+    fields:
+      - name: "title"
+        label: "标题"
+        widget: "string"
+      - name: "pubDate"
+        label: "发布日期"
+        widget: "datetime"
+        required: false
+      - name: "categories"
+        label: "分类"
+        widget: "list"
+        required: false
+      - name: "description"
+        label: "描述"
+        widget: "text"
+        required: false
+      - name: "body"
+        label: "正文"
+        widget: "markdown"
+        editor_components: [] # 禁用内置组件
+        modes: ["raw"] # 支持 Markdown 视图与原始视图切换
