@@ -16,7 +16,7 @@ collections:
     slug: "{{slug}}"           # 文件命名规则
     fields:
       - { label: "Page name", name: "slug", widget: "string", required: true, hint: "页面名 小写英文" }
-      - { label: "Content", name: "content", widget: "markdown",modes: ["raw"] }
+      - { label: "Content", name: "content", widget: "markdown", modes: ["raw"] }
     editor:
       template: |
         ---
@@ -24,7 +24,7 @@ collections:
         ---
 
         <LayoutDefault>
-          {{content}}
+          {{ content }}
         </LayoutDefault>
 
   # 博客集合
@@ -36,6 +36,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Categories", name: "categories", widget: "list", default: [], hint: "逐项添加分类" }
+      - { label: "Categories", name: "categories", widget: "string", hint: "使用逗号分隔多个分类" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Content", name: "content", widget: "markdown", required: true, editor: { preview: false } }
