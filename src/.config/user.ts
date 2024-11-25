@@ -5,8 +5,8 @@ export const userConfig: Partial<UserConfig> = {
   // site: { title: "講評世界" },
   // seo: { twitter: "@moeyua13" },
   site: {
-    title: '業精於勤 荒於嬉 行成於思 毀於隨',
-    subtitle: 'Trading Life',
+    title: '日進月歩',
+    subtitle: '業精於勤 荒於嬉 行成於思 毀於隨',
     author: 'invmy',
     description: 'Rediscory the beauty of typography',
     website: 'https://astro-theme-typography.vercel.app/',
