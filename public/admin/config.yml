@@ -8,52 +8,33 @@ media_folder: static/img
 public_folder: /img
 collections:
   # 页面集合
-  - name: "pages"
-    folder: "src/pages"
-    label: "页面"
-    create: true
-    filter:
-      - field: "type"
-        value: "page"
+  # 配置 pages
+  - name: "pages"              # 唯一 ID
+    label: "Pages"             # 管理界面显示的名称
+    folder: "src/pages"        # 文件存放路径
+    create: true               # 是否允许创建新文件
+    slug: "{{slug}}"           # 文件命名规则
     fields:
-      - name: "title"
-        label: "标题"
-        widget: "string"
-      - name: "description"
-        label: "描述"
-        widget: "text"
-        required: false
-      - name: "body"
-        label: "正文"
-        widget: "markdown"
-        editor_components: [] # 禁用内置组件
-        buttons: ["bold", "italic", "link", "code", "heading-one", "heading-two", "heading-three"] # 显示工具栏按钮
-        modes: ["raw"] # 支持 Markdown 视图与原始视图切换
+      - { label: "Content", name: "content", widget: "markdown",modes: ["raw"] }
+    editor:
+      template: |
+        ---
+        import LayoutDefault from '~/layouts/LayoutDefault.astro'
+        ---
+
+        <LayoutDefault>
+          {{content}}
+        </LayoutDefault>
 
   # 博客集合
   - name: "blog"
-    label: "博客"
-    folder: "src/content/posts/"
+    label: "Blog Posts"
+    folder: "src/content/posts"
     create: true
+    slug: "{{slug}}"
     fields:
-      - name: "title"
-        label: "标题"
-        widget: "string"
-      - name: "pubDate"
-        label: "发布日期"
-        widget: "datetime"
-        required: false
-      - name: "categories"
-        label: "分类"
-        widget: "list"
-        required: false
-      - name: "description"
-        label: "描述"
-        widget: "text"
-        required: false
-      - name: "body"
-        label: "正文"
-        widget: "markdown"
-        editor_components: [] # 禁用内置组件
-        buttons: ["bold", "italic", "link", "code", "heading-one", "heading-two", "heading-three"] # 显示工具栏按钮
-        modes: ["raw"] # 支持 Markdown 视图与原始视图切换
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Categories", name: "categories", widget: "list", default: [] }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Content", name: "content", widget: "markdown", modes: ["raw"] }
