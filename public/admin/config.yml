@@ -36,6 +36,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Categories", name: "categories", widget: "string", hint: "使用逗号分隔多个分类" }
+      - { label: "Categories", name: "categories", widget: "list", hint: "分类" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Content", name: "content", widget: "markdown", required: true, editor: { preview: false } }
+      - { label: "Content", name: "content", widget: "markdown",  modes: ["raw"] }
