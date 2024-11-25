@@ -20,7 +20,8 @@ collections:
         name: "categories"
         widget: "select"
         options: 
-          - 交易记录
+          - 交易日记
+          - 交易分享
           - 数字移民
           - 闲来无事
         multiple: true # 允许多选
