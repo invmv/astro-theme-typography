@@ -24,4 +24,16 @@ collections:
           - 数字移民
           - 闲来无事
         multiple: true # 允许多选
-      - { label: "body", name: "body", widget: "markdown", modes: ["raw"] }
+      # - { label: "body", name: "body", widget: "markdown", modes: ["raw"] }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        modes: ["raw"] # 同时支持富文本和原始模式
+        editor_components:
+          - label: "Image"
+            id: "image"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+            pattern: "^!\\[.*\\]\\((.*)\\)$"
+            from_block: "{{image}}"
+            to_block: "{{image}}"
