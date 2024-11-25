@@ -10,6 +10,7 @@ collections:
   # 页面集合
   - name: "pages"
     folder: "src/pages"
+    label: "页面"
     create: true
     filter:
       - field: "type"
@@ -30,6 +31,7 @@ collections:
 
   # 博客集合
   - name: "blog"
+    label: "博客"
     folder: "src/content/posts/"
     create: true
     fields:
