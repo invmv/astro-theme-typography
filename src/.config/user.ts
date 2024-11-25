@@ -5,8 +5,8 @@ export const userConfig: Partial<UserConfig> = {
   // site: { title: "講評世界" },
   // seo: { twitter: "@moeyua13" },
   site: {
-    title: '交易日记',
-    subtitle: 'Day trading BLog',
+    title: 'Trading Live',
+    subtitle: '交易日记',
     author: 'invmy',
     description: 'Rediscory the beauty of typography',
     website: 'https://astro-theme-typography.vercel.app/',
@@ -42,10 +42,6 @@ export const userConfig: Partial<UserConfig> = {
         name: 'Categories',
         href: '/categories',
       },
-      {
-        name: 'About',
-        href: '/about',
-      },
     ],
     categoryMap: [{ name: '胡适', path: 'hu-shi' }],
     footer: [
@@ -55,7 +51,7 @@ export const userConfig: Partial<UserConfig> = {
     ],
   },
   appearance: {
-    theme: 'light',
+    theme: 'dart',
     locale: 'zh-cn',
     colorsLight: {
       primary: '#2e405b',
@@ -81,6 +77,9 @@ export const userConfig: Partial<UserConfig> = {
   },
   comment: {
     // disqus: { shortname: "typography-astro" },
+    disqus: {
+      shortname: 'invmy'
+    }
   },
   latex: {
     katex: false,

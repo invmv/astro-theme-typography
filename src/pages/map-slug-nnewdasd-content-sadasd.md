@@ -1,4 +1,0 @@
----
-slug: nnewdasd
-content: sadasd
----

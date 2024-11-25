@@ -4,30 +4,9 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
   base_url: https://invmy.us.kg
   auth_endpoint: /api/auth
-media_folder: static/img
-public_folder: /img
+media_folder: public/img
+public_folder: /public
 collections:
-  # 页面集合
-  # 配置 pages
-  - name: "pages"              # 唯一 ID
-    label: "Pages"             # 管理界面显示的名称
-    folder: "src/pages"        # 文件存放路径
-    create: true               # 是否允许创建新文件
-    slug: "{{slug}}"           # 文件命名规则
-    fields:
-      - { label: "Page name", name: "slug", widget: "string", required: true, hint: "页面名 小写英文" }
-      - { label: "Content", name: "content", widget: "markdown", modes: ["raw"] }
-    editor:
-      template: |
-        ---
-        import LayoutDefault from '~/layouts/LayoutDefault.astro'
-        ---
-
-        <LayoutDefault>
-          {{ content }}
-        </LayoutDefault>
-
-  # 博客集合
   - name: "blog"
     label: "Posts"
     folder: "src/content/posts"
@@ -36,6 +15,13 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Categories", name: "categories", widget: "list", hint: "分类" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Content", name: "content", widget: "markdown",  modes: ["raw"] }
+      - { label: "Description", name: "description", widget: "string", hint: "附言" }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        options: 
+          - 交易记录
+          - 数字移民
+          - 闲来无事
+        multiple: true # 允许多选
+      - { label: "Content", name: "content", widget: "markdown", modes: ["raw"] }
