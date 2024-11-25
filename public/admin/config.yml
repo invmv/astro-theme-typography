@@ -27,6 +27,7 @@ collections:
         label: "正文"
         widget: "markdown"
         editor_components: [] # 禁用内置组件
+        buttons: ["bold", "italic", "link", "code", "heading-one", "heading-two", "heading-three"] # 显示工具栏按钮
         modes: ["raw"] # 支持 Markdown 视图与原始视图切换
 
   # 博客集合
@@ -54,4 +55,5 @@ collections:
         label: "正文"
         widget: "markdown"
         editor_components: [] # 禁用内置组件
+        buttons: ["bold", "italic", "link", "code", "heading-one", "heading-two", "heading-three"] # 显示工具栏按钮
         modes: ["raw"] # 支持 Markdown 视图与原始视图切换
