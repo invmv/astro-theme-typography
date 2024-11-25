@@ -5,9 +5,9 @@ export const userConfig: Partial<UserConfig> = {
   // site: { title: "講評世界" },
   // seo: { twitter: "@moeyua13" },
   site: {
-    title: '活版印字',
-    subtitle: 'Typography',
-    author: 'Moeyua',
+    title: '交易日记',
+    subtitle: 'Day trading BLog',
+    author: 'invmy',
     description: 'Rediscory the beauty of typography',
     website: 'https://astro-theme-typography.vercel.app/',
     pageSize: 5,
