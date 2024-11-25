@@ -9,7 +9,7 @@ export const userConfig: Partial<UserConfig> = {
     subtitle: '業精於勤 荒於嬉 行成於思 毀於隨',
     author: 'invmy',
     description: 'Rediscory the beauty of typography',
-    website: '/',
+    website: 'https://invmy.us.kg',
     pageSize: 5,
     socialLinks: [
       {
