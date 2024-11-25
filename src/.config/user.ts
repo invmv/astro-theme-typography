@@ -51,7 +51,7 @@ export const userConfig: Partial<UserConfig> = {
     ],
   },
   appearance: {
-    theme: 'dart',
+    theme: 'dark',
     locale: 'zh-cn',
     colorsLight: {
       primary: '#2e405b',

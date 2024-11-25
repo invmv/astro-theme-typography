@@ -24,4 +24,4 @@ collections:
           - 数字移民
           - 闲来无事
         multiple: true # 允许多选
-      - { label: "Content", name: "content", widget: "markdown", modes: ["raw"] }
+      - { label: "body", name: "body", widget: "markdown", modes: ["raw"] }
