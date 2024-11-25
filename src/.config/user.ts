@@ -9,24 +9,12 @@ export const userConfig: Partial<UserConfig> = {
     subtitle: '業精於勤 荒於嬉 行成於思 毀於隨',
     author: 'invmy',
     description: 'Rediscory the beauty of typography',
-    website: 'https://astro-theme-typography.vercel.app/',
+    website: '/',
     pageSize: 5,
     socialLinks: [
       {
-        name: 'github',
-        href: 'https://github.com/moeyua/astro-theme-typography',
-      },
-      {
         name: 'rss',
         href: '/atom.xml',
-      },
-      {
-        name: 'twitter',
-        href: 'https://github.com/moeyua/astro-theme-typography',
-      },
-      {
-        name: 'mastodon',
-        href: 'https://github.com/moeyua/astro-theme-typography',
       },
     ],
     navLinks: [
